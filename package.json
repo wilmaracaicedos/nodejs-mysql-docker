@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-mysql-docker",
+  "version": "1.0.0",
+  "description": "Configurar una aplicación de Nodejs y MySQL en contenedores de Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilmaracaicedos/nodejs-mysql-docker.git"
+  },
+  "keywords": [],
+  "author": "Wilmar Caicedo <wilmarcaicedo@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilmaracaicedos/nodejs-mysql-docker/issues"
+  },
+  "homepage": "https://github.com/wilmaracaicedos/nodejs-mysql-docker#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.5.1"
+  }
+}
