@@ -1,13 +1,15 @@
 import express from 'express';
 import { createPool } from 'mysql2/promise';
+import { config } from 'dotenv';
+config();
 
 const app = express();
 
 const pool = createPool({
-  host: 'localhost',
+  host: process.env.MYSQLDB_HOST,
   user: 'root',
-  password: '123456',
-  port: 3307
+  password: process.env.MYSQLDB_ROOT_PASSWORD,
+  port: process.env.MYSQLDB_DOCKER_PORT
 });
 
 app.get('/', (req, res) => {
@@ -19,5 +21,5 @@ app.get('/ping', async (req, res) => {
   res.json(result[0]);
 });
 
-app.listen(3000);
-console.log('Server on port', 3000);
+app.listen(process.env.NODE_DOCKER_PORT);
+console.log('Server on port', process.env.NODE_DOCKER_PORT);
